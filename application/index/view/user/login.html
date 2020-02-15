@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <style>
+        *{margin:0px auto;padding:0px;}
+        .boss{width:300px;height:300px;margin:160px auto;}
+        .title{text-align:center;font-size:20px;}
+        .form{width:300px;padding-top:30px;}
+        .form p{width:300px;height:45px;text-align:center;}
+        input{width:200px;height:30px;padding-left:5px;}
+        .form p:nth-child(3) input{width:210px;height:35px;background-color:rgb(7, 75, 7);color:#f1f1f1;border:none;}
+    </style>
+</head>
+<body>
+    <div class="boss">
+        <div class="title">Login</div>
+        <form class="form" action="" method="POST" onsubmit="return false">
+            <p><input type="text" placeholder="User:"></p>
+            <p><input type="password" placeholder="Pass:"></p>
+            <p><input id="button" type="button" value="点击登录"></p>
+        </form>
+    </div>
+</body>
+</html>
+<script src="static/js/jquery.min.js"></script>
+<script src="static/layer/layer.js"></script>
+<script>
+        $(document).ready(function(){
+            $('#button').click(function(){
+               //iframe层
+               layer.open({
+               type: 2,
+               title: '难以克服的困难',
+               shadeClose: true,
+               shade: 0.8,
+               area: ['1380px', '70%'],
+               content: 'index/user/icon' //iframe的url
+               }); 
+            });
+        });
+</script>
